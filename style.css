@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    min-height: 5em;
+    justify-content: end;
+    gap: 1rem;
+    padding: 0.5rem;
+    background-color: lightcoral;
+    align-items: center;
+}
+
+.navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightcoral;
+    user-select: none;
+    -webkit-user-select: none; /* cuz safari */
+
+    min-width: 8rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navigation-button:hover {
+    background-color: whitesmoke;
+}
+
+.navigation-button.current,
+.navigation-button.current:hover {
+    background-color: #f8c0c0;
+    color: white;
+    cursor: not-allowed;
+}
+
+.home-button {
+    margin-right: auto;
+}
