@@ -1,8 +1,14 @@
 <?php
+session_start();
 require 'db.php';
 
 if($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: signup.html');
+    exit;
+}
+
+if(isset($_SESSION['user_id'])) {
+    header('Location: index.html');
     exit;
 }
 
@@ -11,6 +17,7 @@ $email = trim($_POST['email'] ?? '');
 $password = $_POST['password'] ?? '';
 $confirm_password = $_POST['confirm_password'] ?? '';
 
+// check again cuz js checks can be bypassed
 if(!preg_match('/^[a-zA-Z0-9_]+$/', $username) || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($password) < 8 || $password !== $confirm_password) {
     header('Location: signup.html?error=invalid');
     exit;

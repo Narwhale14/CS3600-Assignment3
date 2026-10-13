@@ -6,18 +6,19 @@
     <title>Home</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
     <div class="header">
         <a class="utility-button home-button current">Home</a>
-        <a href="login.html" class="utility-button">Login</a>
-        <a href="signup.html" class="utility-button">Registration</a>
+        <a href="login.html" class="utility-button" id="login-link">Login</a>
+        <a href="signup.html" class="utility-button" id="signup-link">Register</a>
         <a href="logout.html" class="utility-button">Logout</a>
     </div>
 
     <div class="page-body">
         <h1>Welcome to the Log In & Sign Up Simulator!</h1>
-        <h1>You are currently logged out</h1>
+        <h1 id="status">You are currently logged out</h1>
     </div>
 </body>

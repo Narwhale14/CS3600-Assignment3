@@ -17,15 +17,15 @@
         <a href="logout.html" class="utility-button">Logout</a>
     </div>
 
-    <form class="page-body" novalidate>
+    <form class="page-body" novalidate method="post" action="login_handler.php">
         <h1>Log In</h1>
         <div class="inputs">
             <div class="field">
-                <input type="text" id="user" placeholder="Username or Email" class="user-input" required>
+                <input type="text" id="user" name="user" placeholder="Username or Email" class="user-input" required>
                 <p class="error" id="user-error"></p>
             </div>
             <div class="field">
-                <input type="password" id="password" placeholder="Password" class="user-input" required>
+                <input type="password" id="password" name="password" placeholder="Password" class="user-input" required>
                 <p class="error" id="password-error"></p>
             </div>
         </div>

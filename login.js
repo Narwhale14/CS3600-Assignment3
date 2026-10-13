@@ -36,3 +36,8 @@ form.addEventListener("submit", (event) => {
         event.preventDefault();
     }
 });
+
+const params = new URLSearchParams(location.search);
+if(params.get("error") == "invalid") {
+    showError("user", "Incorrect username/email or password");
+}

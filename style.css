@@ -47,6 +47,13 @@ button {
     background-color: indianred;
 }
 
+.utility-button.disabled,
+.utility-button.disabled:hover {
+    background-color: white;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .utility-button.dark:hover {
     background-color: color-mix(in srgb, indianred 90%, black);
 }
