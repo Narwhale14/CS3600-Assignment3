@@ -28,7 +28,7 @@ form.addEventListener("submit", (event) => {
     if(email.validity.valueMissing) {
         showError("email", "Email is required");
         valid = false;
-    } else if(email.validity.typeMismatch) {
+    } else if(email.validity.typeMismatch || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
         showError("email", "Please enter a valid email");
         valid = false;
     } else {
@@ -65,4 +65,6 @@ form.addEventListener("submit", (event) => {
 const params = new URLSearchParams(location.search);
 if(params.get("error") == "taken") {
     showError("username", "Username or email is already taken");
+} else if(params.get("error") == "invalid") {
+    showError("username", "Some details were invalid, please check and try again");
 }
