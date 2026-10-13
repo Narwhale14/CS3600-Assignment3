@@ -3,21 +3,34 @@
     padding: 0;
 }
 
+p, h1 {
+    color: indianred;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     min-height: 5em;
     justify-content: end;
     gap: 1rem;
     padding: 0.5rem;
-    background-color: lightcoral;
+    background-color: salmon;
     align-items: center;
 }
 
-.navigation-button {
+.utility-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: lightcoral;
+    color: salmon;
     user-select: none;
     -webkit-user-select: none; /* cuz safari */
 
@@ -29,17 +42,80 @@
     border-radius: 5px;
 }
 
-.navigation-button:hover {
+.utility-button.dark {
+    color: white;
+    background-color: indianred;
+}
+
+.utility-button.dark:hover {
+    background-color: color-mix(in srgb, indianred 90%, black);
+}
+
+.utility-button:hover {
     background-color: whitesmoke;
 }
 
-.navigation-button.current,
-.navigation-button.current:hover {
-    background-color: #f8c0c0;
+.utility-button.current,
+.utility-button.current:hover {
+    background-color: indianred;
     color: white;
     cursor: not-allowed;
 }
 
 .home-button {
     margin-right: auto;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2rem;
+}
+
+.user-input {
+    box-sizing: border-box;
+    width: 100%;
+
+    height: 3rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+    background-color: white;
+    border: 2px solid salmon;
+    border-radius: 5px;
+}
+
+.user-input:focus {
+    outline: 2px solid indianred;
+    outline-offset: 2px;
+}
+
+.user-input.invalid {
+    border-color: firebrick;
+}
+
+.inputs {
+    width: 20rem;
+    max-width: 100%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.error {
+    color: firebrick;
+    font-size: 0.875rem;
+}
+
+/* hidden until js puts a message in it */
+.error:empty {
+    display: none;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,25 @@
 
 <body>
     <div class="header">
-        <a href="index.html" class="navigation-button home-button">Home</a>
-        <a class="navigation-button current">Login</a>
-        <a href="signup.html" class="navigation-button">Registration</a>
-        <a href="logout.html" class="navigation-button">Logout</a>
+        <a href="index.html" class="utility-button home-button">Home</a>
+        <a class="utility-button current">Login</a>
+        <a href="signup.html" class="utility-button">Registration</a>
+        <a href="logout.html" class="utility-button">Logout</a>
     </div>
+
+    <form class="page-body">
+        <h1>Log In</h1>
+        <div class="inputs">
+            <div class="field">
+                <input type="email" id="email" placeholder="Email" class="user-input" required>
+                <p class="error" id="email-error"></p>
+            </div>
+            <div class="field">
+                <input type="password" id="password" placeholder="Password" class="user-input" required>
+                <p class="error" id="password-error"></p>
+            </div>
+        </div>
+        <button class="utility-button dark">Log In</button>
+        <p>Don't have an account? <a href="signup.html">Register</a></p>
+    </form>
 </body>
