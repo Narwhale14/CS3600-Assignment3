@@ -61,3 +61,8 @@ form.addEventListener("submit", (event) => {
         event.preventDefault();
     }
 });
+
+const params = new URLSearchParams(location.search);
+if(params.get("error") == "taken") {
+    showError("username", "Username or email is already taken");
+}

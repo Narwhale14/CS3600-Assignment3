@@ -17,23 +17,23 @@
         <a href="logout.html" class="utility-button">Logout</a>
     </div>
 
-    <form class="page-body" novalidate method="post", action="signup_handler.php">
+    <form class="page-body" novalidate method="post" action="signup_handler.php">
         <h1>Register</h1>
         <div class="inputs">
             <div class="field">
-                <input type="text" id="username" placeholder="Username" class="user-input" required>
+                <input type="text" id="username" name="username" placeholder="Username" class="user-input" required>
                 <p class="error" id="username-error"></p>
             </div>
             <div class="field">
-                <input type="email" id="email" placeholder="Email" class="user-input" required>
+                <input type="email" id="email" placeholder="Email" name="email" class="user-input" required>
                 <p class="error" id="email-error"></p>
             </div>
             <div class="field">
-                <input type="password" id="password" placeholder="Password" class="user-input" required>
+                <input type="password" id="password" placeholder="Password" name="password" class="user-input" required>
                 <p class="error" id="password-error"></p>
             </div>
             <div class="field">
-                <input type="password" id="confirm-password" placeholder="Confirm Password" class="user-input" required>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" class="user-input" required>
                 <p class="error" id="confirm-password-error"></p>
             </div>
         </div>
